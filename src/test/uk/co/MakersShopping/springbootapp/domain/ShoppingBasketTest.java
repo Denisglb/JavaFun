@@ -50,15 +50,15 @@ public class ShoppingBasketTest {
         assertThat(basket.calculateTotal(), is(4));
     }
 
-    @Test
-    public void canListItemDescriptions(){
-        Item anItem = new Item("cheese");
-
-        basket.add(anItem);
-
-        assertThat(basket.getDescriptionReceipt(), is("cheese"));
-
-    }
+//    @Test
+//    public void canListItemDescriptions(){
+//        Item anItem = new Item("cheese");
+//
+//        basket.add(anItem);
+//
+//        assertThat(basket.getDescriptionReceipt(), is("cheese"));
+//
+//    }
 
     /*
     @Test

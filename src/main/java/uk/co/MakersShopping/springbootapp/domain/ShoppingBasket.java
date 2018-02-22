@@ -22,14 +22,11 @@ public class ShoppingBasket {
         return count;
     }
 
-    public String getDescriptionReceipt() {
-
-        for(String s = items){
-            for (int count = 0; count <= items.size -1; count++);
-            System.out.println(s);
-        }
-//        for(Item itemFromBasket:items) {
-//            count += itemFromBasket.getDescription();
-//       }
-    }
+//    public String getDescriptionReceipt() {
+//
+//        for(String s = items){
+//            for (int count = 0; count <= items.size -1; count++);
+//            System.out.println(s);
+//        }
+//    }
 }

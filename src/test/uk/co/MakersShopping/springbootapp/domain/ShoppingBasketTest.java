@@ -2,8 +2,6 @@ package uk.co.MakersShopping.springbootapp.domain;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import uk.co.MakersShopping.springbootapp.domain.Item;
-import uk.co.MakersShopping.springbootapp.domain.ShoppingBasket;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -19,12 +17,12 @@ public class ShoppingBasketTest {
 
     @Test
     public void canAddToShoppingBasket(){
-        basket.add(new Item("cheese"));
+        basket.add(new Item(100, "cheese"));
     }
 
     @Test
     public void canGetLastItemFromShoppingBasket(){
-        Item expected = new Item("cheese");
+        Item expected = new Item(100, "cheese");
         basket.add(expected);
 
         assertThat(basket.remove(), is(expected));
@@ -50,28 +48,5 @@ public class ShoppingBasketTest {
         assertThat(basket.calculateTotal(), is(4));
     }
 
-    @Test
-    public void canListItemDescriptions(){
-        Item anItem = new Item("cheese");
-
-        basket.add(anItem);
-
-        assertThat(basket.getDescriptionReceipt(), is("cheese"));
-
-    }
-
-    /*
-    @Test
-    public void canListManyItemDescriptions(){
-        Item anItem = new Item("cheese");
-        Item anotherItem = new Item("cake");
-        basket.add(anItem);
-        basket.add(anotherItem)
-
-        assertThat(basket.getDescriptionReceipt(), is("cake\ncheese"));
-
-    }
-    */
-
-
+    
 }

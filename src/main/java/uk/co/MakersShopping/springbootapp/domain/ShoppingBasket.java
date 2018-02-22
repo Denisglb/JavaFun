@@ -2,13 +2,24 @@ package uk.co.MakersShopping.springbootapp.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
 
 public class ShoppingBasket {
 
-    List<Item> items = new ArrayList<Item>();
+
+
+    ArrayList<Item> items = new ArrayList<Item>();
+
+    public ArrayList<Item> getList() {
+        return items;
+    }
+
+
+
     public void add(Item item) {
         items.add(item);
     }
+
 
     public Item remove() {
         return items.remove(items.size()-1);

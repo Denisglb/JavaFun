@@ -8,6 +8,7 @@ public class Basket {
 
     public static void main(String[] args) {
         SpringApplication.run(Basket.class, args);
-        System.out.println("Wankers");
+        System.out.println("VOILA");
+
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
-public class ShoppingBasket {
+public class ShoppingBasket implements IShoppingBasket{
 
 
 

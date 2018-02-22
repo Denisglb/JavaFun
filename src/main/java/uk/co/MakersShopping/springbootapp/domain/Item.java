@@ -4,12 +4,10 @@ public class Item {
     private Integer price;
     private String description;
 
-    public Item(String description) {
-        this.description = description;
-    }
 
-    public Item(int newPrice) {
-        price = newPrice;
+    public Item(int price, String description) {
+        this.price = price;
+        this.description = description;
     }
 
     public Integer getPrice() {

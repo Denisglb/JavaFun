@@ -17,12 +17,12 @@ public class ShoppingBasketTest {
 
     @Test
     public void canAddToShoppingBasket(){
-        basket.add(new Item(100, "cheese"));
+        basket.add(new Item(100, "cheese", 6));
     }
 
     @Test
     public void canGetLastItemFromShoppingBasket(){
-        Item expected = new Item(100, "cheese");
+        Item expected = new Item(100, "cheese", 8);
         basket.add(expected);
 
         assertThat(basket.remove(), is(expected));
@@ -30,7 +30,7 @@ public class ShoppingBasketTest {
 
     @Test
     public void canGetItemPriceTotalForSingleItem(){
-        Item anItem = new Item(1);
+        Item anItem = new Item(1, "finger", 20);
 
         basket.add(anItem);
 
@@ -39,8 +39,8 @@ public class ShoppingBasketTest {
 
     @Test
     public void canGetItemsPriceTotalForMultipleItems(){
-        Item anItem = new Item(1);
-        Item anotherItem = new Item(3);
+        Item anItem = new Item(1, "toe", 7);
+        Item anotherItem = new Item(3, "teeth", 8);
 
         basket.add(anItem);
         basket.add(anotherItem);
@@ -48,5 +48,4 @@ public class ShoppingBasketTest {
         assertThat(basket.calculateTotal(), is(4));
     }
 
-    
 }

@@ -10,10 +10,19 @@ public class ShoppingBasketTest {
 
     private ShoppingBasket basket;
 
-    @BeforeEach
-    void setUp() {
-        basket = new ShoppingBasket();
-    }
+//    @BeforeEach
+//    void setUp() {
+//        basket = new ShoppingBasket(new DummyItemFactory());
+//    }
+//
+//    class DummyItemFactory implements IItemFactory
+//    {
+//
+//        @Override
+//        public Item createItem(int id) {
+//            return null;
+//        }
+//    }
 
     @Test
     public void canAddToShoppingBasket(){

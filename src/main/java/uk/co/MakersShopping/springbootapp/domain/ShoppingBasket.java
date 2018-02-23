@@ -1,12 +1,25 @@
 package uk.co.MakersShopping.springbootapp.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingBasket {
 
+    @Autowired
+    IItemFactory factory;
+
+//    private IItemFactory factory;
+
+//    public ShoppingBasket(IItemFactory factory)
+//    {
+//        this.factory = factory;
+//    }
+
     List<Item> items = new ArrayList<Item>();
-    public void add(Item item) {
+    public void add(int itemId) {
+        Item item = factory.createItem(itemId);
         items.add(item);
     }
 
